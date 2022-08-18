@@ -1,0 +1,329 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Computational material science lab at YSU">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Computational material science lab at YSU</title>
+  <meta property="og:url"                content="https://dftevn.org" />
+  <meta property="og:type"               content="article" />
+  <meta property="og:title"              content="Computational material science lab at YSU"/>
+  <meta property="og:description"        content="" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600" rel="stylesheet">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <style>
+      body {
+          background-color: #FDF7EE;
+          padding: 0;
+          margin: 0;
+      }
+
+      .intro {
+          text-align: center;
+          color: #57596b;
+          font-family: Raleway, sans-serif;
+      }
+
+      .intro h1 {
+          font-size: 60px;
+          font-weight: 500;
+          margin: 0;
+          color: #1F618D;
+      }
+
+      .intro h2 {
+          font-size: 36px;
+          font-weight: 400;
+          margin: 0;
+          color: rgba(0, 0, 0, 0.4);
+          line-height: 24px;
+      }
+
+      .intro h4.project-name {
+          margin-bottom: 5px;
+      }
+
+      .intro .p {
+          margin: auto;
+          padding: 40px 0;
+          font-weight: 300;
+          font-size: 16px;
+          letter-spacing: 1pt;
+          line-height: 160%;
+          max-width: 90%; //730px;
+          text-align: left;
+      }
+
+      .intro .p h3 {
+          font-size: 26px;
+          font-weight: 600;
+          margin: 19px 0 12px 0;
+      }
+
+      .intro ul {
+          margin: 8px 0;
+      }
+
+      .intro .p a,
+      .intro .p a:link,
+      .intro .p a:visited {
+          color: #1F618D;
+          font-weight: 500;
+          transition: .15s color;
+      }
+
+      .intro .p a:hover {
+          color: #f79db1;
+      }
+
+      .intro .p small {
+          font-size: 12px;
+          line-height: 16px;
+          opacity: 0.5;
+          display: block;
+          margin-top: 10px;
+      }
+
+      .overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: -1;
+          background-color: rgb(253, 247, 238);
+          opacity: 0.7;
+      }
+
+      ul > li > ul > li {
+          font-size: 12px;
+          line-height: 18px;
+      }
+
+      @keyframes play {
+          0% {
+              background-position: 0px 0;
+          }
+          100% {
+              background-position: 0px -2016px;
+          }
+      }
+
+
+      .left {
+          position: fixed;
+          top: 50%;
+          left: 0;
+          width: 50%;
+          height: 180px;
+          margin-top: -90px;
+      }
+
+      .right {
+          position: absolute;
+          top: 0;
+          width: 50%;
+          left: 50%;
+          padding: 0 44px;
+          box-sizing: border-box;
+          background-color: #6458C3;
+          color: #efdafb;
+          min-height: 100%;
+      }
+
+      .left,
+      .right .p .desc,
+      .right .p .topics,
+      .right .p .team,
+      .right .p small {
+          opacity: 0;
+          -webkit-animation: smooth-entry 1s forwards;
+          -moz-animation: smooth-entry 1s forwards;
+          animation: smooth-entry 1s forwards;
+      }
+
+      .left {
+          -webkit-animation-delay: .2s;
+          -moz-animation-delay: .2s;
+          animation-delay: .2s;
+      }
+
+      .right .p .desc {
+          -webkit-animation-delay: .5s;
+          -moz-animation-delay: .5s;
+          animation-delay: .5s;
+      }
+
+      .right .p .topics {
+          -webkit-animation-delay: .9s;
+          -moz-animation-delay: .9s;
+          animation-delay: .9s;
+      }
+
+      .right .p .team {
+          -webkit-animation-delay: 1.3s;
+          -moz-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+      }
+
+      .right .p small {
+          -webkit-animation-delay: 1.6s;
+          -moz-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+      }
+
+      @media (max-width: 780px) {
+          .left {
+              position: static;
+              height: 200px;
+              text-align: center;
+              width: auto;
+              margin: 0;
+          }
+          .right {
+              position: static;
+              width: auto;
+          }
+          .p {
+              max-width: 400px;
+          }
+          .logo {}
+          .intro {
+              margin-top: 30px;
+          }
+          .intro h1 {
+              font-size: 40px;
+              margin-top: 10px;
+          }
+          h2 {
+              font-size: 25px;
+          }
+      }
+
+      @-webkit-keyframes smooth-entry {
+          0% {
+              opacity: 0;
+              -webkit-transform: translateY(+1.4em);
+          }
+          100% {
+              opacity: 1;
+              -webkit-transform: translateY(0);
+          }
+      }
+
+      @-moz-keyframes smooth-entry {
+          0% {
+              opacity: 0;
+              -moz-transform: translateY(+1.4em);
+          }
+          100% {
+              opacity: 1;
+              -moz-transform: translateY(0);
+          }
+      }
+
+      @keyframes smooth-entry {
+          0% {
+              opacity: 0;
+              -webkit-transform: translateY(+1.4em);
+              -moz-transform: translateY(+1.4em);
+              -ms-transform: translateY(+1.4em);
+              -o-transform: translateY(+1.4em);
+              transform: translateY(+1.4em);
+          }
+          100% {
+              opacity: 1;
+              -webkit-transform: translateY(0);
+              -moz-transform: translateY(0);
+              -ms-transform: translateY(0);
+              -o-transform: translateY(0);
+              transform: translateY(0);
+          }
+      }
+  </style>
+</head>
+
+<body>
+<div class="overlay"></div>
+    <div class="intro">
+        <div class="">
+            <h1>Novel 2D TMCs for selective O2, NO, NO2, and nucleobase sensors</h1>
+            <br>
+            <h2>Psi-k 2022</h2>
+            </div>
+        <div class="">
+            <div class="p">
+                <section class="desc">
+                    <p>
+                            <h4> Misha Aghamalyan (1), Evgeni Mamasakhlisov (1, 2),  Ekaterina Sukhanova (3),  Alexander Kvashnin (4),  Zakhar Popov (3), Hayk Zakaryan (1)</h4>
+                    </p>
+                     <p>
+                            <h4> (1) Yerevan State University, Armenia, (2) Russian–Armenian University, Armenia, (3) Institute of Biochemical Physics, Russian Academy of Sciences, N.M. Emanuel RAS, Russia, (4) Skolkovo Institute of Science and Technology, Russia</h4>
+                     </p>
+
+                    While there have already been substantial studies of the several two-dimensional crystals formed from natural crystalline materials with layered structures (graphene, TMDC, and so on), the field's attention is shifting to two-dimensional artificial materials. Theoretical studies are an excellent way to study novel two-dimensional materials with uses in electronics, catalysis, and sensing. Because of the large surface area compared to the bulk size and composition diversity of two-dimensional transition metal chalcogenide nanostructures, they have a wide range of uses in chemical detectors. In the presented study the adsorption of several gas and nucleobase molecules on novel 2D binary structures of metal (Mo, W) chalcogenides (S, Se) was carried out. As a result, review of adsorption energies, charge transfer, conductivity change, selectivity and other properties are presented and compared for novel and established 2D TMCs. New materials are proposed for selective O2, NO, NO2 and nucleobase sensing.
+                </section>
+
+                <section class="poster">
+                    <h3>Poster</h3>
+                    <a href="./psik_poster_misha.pdf">Download the poster</a>
+                </section>
+
+                <section class="publications">
+                    <h3>Publications related to the presented research</h3>
+                    <h4 class="project-name"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0169433222005414" target="_blank"><strong>
+                      2D-Mo3S4 phase as promising contact for MoS2
+                    </strong></a></h4>
+                  E.V.Sukhanova, A.G.Kvashnin, L.A.Bereznikova, H.A.Zakaryan, M.A.Aghamalyan, D.G.Kvashnin, Z.I.Popov
+                    <br>
+
+                     <h4 class="project-name"><a href="https://www.mdpi.com/2079-4991/12/5/774" target="_blank"><strong>
+                      Computational Design of Gas Sensors Based on V3S4 Monolayer
+                    </strong></a></h4>
+                  Chepkasov, Ilya V., Ekaterina V., Sukhanova, Alexander G., Kvashnin, Hayk A., Zakaryan, Misha A., Aghamalyan, Yevgeni Sh., Mamasakhlisov, Anton M., Manakhov, Zakhar I., Popov, and Dmitry G., Kvashnin
+                    <br>
+
+                    <h4 class="project-name"><a href="https://link.springer.com/article/10.3103/S1068337222020037" target="_blank"><strong>
+                      Adsorption of Hydrogen Peroxide on Two-Dimensional Transition Metal Chalcogenides
+                    </strong></a></h4>
+                  Aghamalyan, M A, V M, Aroutiounian, E V, Sukhanova, A G, Kvashnin, Z I, Popov, and A A, Zakaryan
+                    <br>
+
+                     <h4 class="project-name"><a href="https://link.springer.com/article/10.1134/S0021364022100162" target="_blank"><strong>
+                      Map of Two-Dimensional Tungsten Chalcogenide Compounds (W–S, W–Se, W–Te) Based on USPEX Evolutionary Search
+                    </strong></a></h4>
+                   Sukhanova, E V, A G, Kvashnin, M A, Agamalyan, H A, Zakaryan, and Z I, Popov
+                    <br>
+
+                    <h4 class="project-name"><a href="https://link.springer.com/article/10.3103/S1068337222020025" target="_blank"><strong>
+                      Investigation of Carbon Dioxide Interaction with Transition Metal Dichalcogenides by First Principles
+                    </strong></a></h4>
+                   Aghamalyan, M A
+                    <br>
+                </section>
+
+                <section class="contact">
+                    <h3>Contact</h3>
+                    <strong>Misha Aghamalyan</strong><br>
+                    Junior Research Scientist<br>
+                    <strong>email: misha.aghamalyan@ysu.am</strong><br>
+                    Chair of Semiconductor Physics and Microelectronics,<br>
+                    Yerevan State University<br>
+                    Republic of Armenia, Yerevan, 0025, 1 Alex Manoogian<br>
+
+                    <strong><a target="_blank" href="https://scholar.google.com/citations?user=BBqicPsAAAAJ&">Google Scholar</a></strong><br>
+                    <strong><a href="https://www.dftevn.org/">Computational material science lab</a></strong><br>
+                </section>
+                <br>
+                <small>Get in touch [<a target="_blank" href="mailto:misha.aghamalyan@ysu.am">misha.aghamalyan@ysu.am</a>]</small>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
